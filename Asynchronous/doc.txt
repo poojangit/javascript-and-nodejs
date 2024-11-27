@@ -1,0 +1,25 @@
+----------------SYNCHRONOUS-----------------
+
+1. Tasks are executed one after another
+2. Blocking of the code . because some tasks does not complete on time
+3. These are executed slower.
+4. useful in some simple codes 
+
+----------------ASYNCHRONOUS-----------------
+
+1. Tasks are executed independently
+2. Non-blocking of the code due to its independent execution
+3. These executes faster.
+4. Usefull in API calls , fetching data, setTimeout etc.
+5. event loop : 
+    JavaScript uses a mechannism called event loop to handle the asynchrous task .
+6. Aynchronous techniques :
+   a. callBacks
+   b. promises
+   c. Async and Await
+
+a. callBacks : callbacks are the functions that is passed as an argument to another function
+
+b. promises : promises is an object that represents eventual completion or failure of an asynchrous op
+
+c. async/Await : it simplifies working with promises.and makes sure asynchronous code to be written like syncronous.
