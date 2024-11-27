@@ -1,0 +1,44 @@
+---------------------FUNCTIONS------------------------
+
+1. Functions are the reuable blocks of the code. They are used to perform some specific tasks.
+2. Types of Functions :
+   a. Named Functions
+   b. Function expression
+   c. Immediately invoked function expression(IIFE)
+   d. Higher Order function(HOI)
+   e. CallBack Function
+   f. arrow functions.
+   g. annonymous functions
+   h. Async functions
+
+3. Named Functions:
+   a. These functions will have the names.
+   b. it is usefull as the function will have the name and easy to call the function by its name
+
+4. Function expressions : 
+    a function is defined and assigned to a variable.
+    b. it is usefull when passing the functions as arguments or assigning them to the variables
+
+5. IIFE : 
+    a. These ate function that immediately invoked after the function is defined.
+    b. It is usefull for encapsulated variables and avoids polluting the global scope.
+
+6. HOI Functions:
+    a. thses functions takes annother function as an arguments and return functions.
+    b. these enables functional programming concepts like map, filter and reduce. 
+
+7. CallBack functions:
+    a. these functions are passed as an agrument to another Function
+    b. these are mainly used in asynchronous Operations
+
+8. Arrow functions: 
+    a. These are the concise way for function expression.
+    b. useful in simplifing the function expression and CallBack function
+
+9. annonymous functions :
+    a. these are the functions without the names
+    b. these are useful for one-time use.
+
+10. Async functions:
+    a. functions that handle aysnchrous code more easily using async and await
+    b. used in promises and asynchronous works.
