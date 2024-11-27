@@ -1,0 +1,18 @@
+---------------VARIABLES-----------------
+1. Variables are named container used for storing data values.
+
+1. VAR :
+2. var is a function scoped and global scoped
+3. var can be redeclared and reinitialized within the same block
+4. it is hoisted and if we try to access before initialization we get undefined
+
+5.LET :
+6. let is a block scoped
+7. let cannont be re declared within the same block
+8. it is hoisted and if we try to access it we get refference error or TEZ(temporal dead zone)
+
+9.CONST :
+10. const is also a block scoped and is a constant
+11. values cannot be redeclared and reinitialized and must be initialized at the time  of declaration
+12. once the values are assigned we connot change it for primary data types
+13. assigned values can be modified for non-primitive datatypes
