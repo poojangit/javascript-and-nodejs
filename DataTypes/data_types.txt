@@ -1,0 +1,44 @@
+1. JavaScript is a object-based and functional programming language.
+2. It is Object Oriented because it revolves around the concepts of Objects. and it does not Strictly follows all the principles of Oops.
+3. It is considered as an Object-oriented programming language.
+
+
+------------------DATA TYPES--------------
+
+1. There are two types of Data Types in JavaScript
+   i. primitive 
+   ii. non-primitive
+2. In primitive data types there are
+   a. number
+   b. string
+   c. boolean
+   d. null
+   e. undefined
+   f. symbol
+   e. BigInt
+3. The Non -primitive data type includes :
+   a. Array
+   b. Objects
+   c. functions
+   d. Date
+   e. RegExp
+   f. Set and Map
+
+4. Datatype is classification defines the type of value a variable is holding.
+5. Datatypes are important for memory management, preventing the error, or to perform some Operations.
+
+6. number - here number represents the numerical values such floating number, integers, (NaN is Number)
+7. string - here string represents the alphanumeric values withing the "" or '' or ``. 
+8. boolean - this reprents a logical value 2 . either true or false.
+9. null - null represents nothing or empty. 
+10. undefined - if we not defined anything to a variable.
+11. symbol - it a special type of Datatype reprents a unique immutable identifiers
+12. BigInt - this Represents a huge number it always ends with n.
+
+13. Array : arrays are the datatype the reprents the values inside []. In JavaScript array can contain heterogenous values.
+14. Object : a collection of key-value pair. there are many ways to create a object in js . like object literals, constructors.
+16. functions : These are the callable objects in JavaScript
+17. Date : Represents dates and times.
+18. RegExp : Represents the regular expression for pattern matching.
+19. set : a collection of unique values
+20. map : a collection of key-value pair where keys can be of any type.
