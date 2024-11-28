@@ -85,16 +85,84 @@
 // main()
 // ------------------------------------------------------------------
 
-function f1() {
-    console.log('f1');
-}
-console.log("Lets fo it");
+// function f1() {
+//     console.log('f1');
+// }
+// console.log("Lets fo it");
 
-setTimeout(function(){
-    console.log('in set time out')
-},0)
+// setTimeout(function(){
+//     console.log('in set time out')
+// },0)
 
-f1()
-f1()
-f1()
-f1()
+// f1()
+// f1()
+// f1()
+// f1()
+
+//todo ----------Differences between Regular function and arrow function
+
+// ^ Arrow function::::::::::
+// ^ 1. also called fat arrow function. Introduced in ES6.
+
+// let add = (x,y) => x+y // Regular exp
+// console.log(add(1,2));
+
+// let add = x => x+x   //arrow function
+// console.log(add(10));
+
+
+// !Argument binding -------------
+
+
+// let myFunc = {        //Regular function
+//     showArgs() {
+//         console.log(arguments);
+//     }
+// }
+// myFunc.showArgs(1,2,3,4)
+
+// let myFunc = {        // arrow function does not have an argument binding.
+//     showArgs : () => {
+//         console.log(...arguments);
+//     }
+// }
+// myFunc.showArgs(1,2,3,4,5)
+
+// ! Use of this key word
+
+// ^ Arrow functions does not have their own this keyword
+
+// let me = {
+//     name : "Pooja",
+//     thisInArrow:() => {
+//         console.log("My name is " + this.name); //No this binding here
+//     },
+//     thisInRegular() {
+//         console.log("My name is " + this.name); //this works here
+//     }
+// }
+// me.thisInArrow()
+// me.thisInRegular()
+
+// ! using new keyword
+
+// ^Regular function created using function declaration and function expression are constructable and callable.
+// ^Regular function can be called using new keyword.
+
+// ^Arrow functions can only be callable and not constructable
+// ^Arrow function can never be used as constructor functions
+// ^Arrow functions can never be invoked with new keyword
+
+// let add = (x,y) => console.log(x+y);
+// new add(10,20)  // add is not a constructor
+
+// ! No dublicate named parameter
+
+// ^Arrow functions can never have a dublicate named parameters, whether in strict or non-strict mode.
+
+// function add(x,x){}
+
+// 'use strict';
+// function add(x,x){}
+
+// (x,x) => {}
