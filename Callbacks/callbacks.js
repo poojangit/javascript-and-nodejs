@@ -45,8 +45,49 @@
 //     console.log("You can start to speak");
 // })
 
-//^ 3. Using Event handling
+//^ 3. Using Event handling ------------>
 
 // document.getElementById("btn").addEventListener("click", function() {
 //     console.log("Did you just click?");
+// })
+
+//^ 4. CallBacks in array methods(forEach,map, filter) ---------->
+
+// const nums = [1,2,3,4,5]
+// nums.forEach(function (number){
+//     console.log(number*2);
+// })
+
+// const attach = ["Riya", "ramya"]
+// attach.map(function fix(names){
+//     console.log("Hello " + names);
+// })
+
+// const numbers = [1,2,3,4,5,6]
+// const evenNum = numbers.filter(function even(nums){
+//     return nums%2==0
+// })
+// console.log(evenNum);
+
+//^ 5. Nested callbacks(callback hell) ------------->
+
+// function first(callback){
+//     setTimeout(()=> {
+//         console.log("First callback");
+//         callback()
+//     },1000)
+// }
+// function second(callback){
+//     setTimeout(()=> {
+//         console.log("Second callback");
+//         callback()
+//     },1000)
+// }
+// function thirdStep(){
+//     console.log("third without callback");
+// }
+// first(()=> {
+//     second(() => {
+//         thirdStep();
+//     })
 // })
