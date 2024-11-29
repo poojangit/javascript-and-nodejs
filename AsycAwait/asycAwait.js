@@ -22,25 +22,25 @@
 
 //^ 3. with try/catch
 
-// async function fetchData() {
-//     try {
-//       const response = await fetch("https://dummyjson.com/produc")
-//       if(!response.ok){
-//         console.log(`HTTP error status ${response.status}`);
+async function fetchData() {
+    try {
+      const response = await fetch("https://dummyjson.com/produc")
+      if(!response.ok){
+        console.log(`HTTP error status ${response.status}`);
         
-//       }
-//       console.log(response.status);
+      }
+      console.log(response.status);
       
-//       const data = response.json()
-//       console.log(response);
-//       console.log(data);
-//     }
-//     catch(error){
-//         console.log(error);
-//     }
-//     finally{
-//         console.log("ends here");
-//     }
-// }
-// fetchData()
+      const data = response.json()
+      console.log(response);
+      console.log(data);
+    }
+    catch(error){
+        console.log(error);
+    }
+    finally{
+        console.log("ends here");
+    }
+}
+fetchData()
 
