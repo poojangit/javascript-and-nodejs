@@ -55,10 +55,10 @@
 //         setTimeout(()=> {
 //             userId()
 //             if(id){
-//                 console.log(`Id no ${id}`);
+//                 resolve(`Id no ${id}`);
 //             }
 //             else {
-//                 console.log("Not found");
+//                 reject("Not found");
 //             }
 //         }, 2000)
 //     })
@@ -72,3 +72,34 @@
 // }).finally(()=> {
 //     console.log("Ends here");
 // })
+
+//^ 3. Example of Chanining promises
+
+// const promiseChain = new Promise((resolve, reject)=>{
+//     resolve(10)
+// })
+// promiseChain.then(number =>{
+//     console.log(`First number ${number}`);
+//     return number*2
+// }).then(number => {
+//     console.log(`Second number ${number}`);
+// }).finally(()=> {
+//     console.log("Ended");
+// })
+
+//^ 4. Example of fetching the data using promises
+
+// fetch('https://dummyjson.com/products')
+// .then(response => response.json())
+// .then(data => console.log(data))
+// .catch(error => console.log('Error', error))
+
+//^ 5. Example using promise.all
+
+// const promise1 = Promise.resolve("First promise resolved");
+// const promise2 = new Promise((resolve, reject)=> setTimeout(resolve,2000,"Second promise"))
+// const promise3 = Promise.resolve("Third promise")
+// Promise.all([promise1,promise2,promise3])
+// .then(result => console.log(result))
+// .catch(error => console.log(error))
+
