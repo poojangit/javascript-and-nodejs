@@ -164,6 +164,49 @@
 // let greet = users.map(names => names.userName+" How are you")
 // console.log(greet);
 
+//! filter() - returns a new array by filtering the conditions
+
+//~ Example 14
+// let products = ["bottle", "charger", "laptop","book"]
+// let filteredResults = products.filter((result)=> result.length == 4)
+// console.log(filteredResults);
+
+//~ Example 15
+// let users = [
+//     {
+//         userName: "pooja",
+//         age: 10
+//     },
+//     {
+//         userName: "priya",
+//         age: 20
+//     }
+// ]
+// console.log(users);
+// let result = users.filter( function validAge(names){
+//     return names.age == 10
+// })
+// console.log(result);
+
+//! reduce() - iterates over each element and accumulate and returns a single value
+
+//~ Example 16
+// let nums = [1,2,3,4]
+// let sum = nums.reduce(function(accumulate, current){
+//     return accumulate+current
+// },0)
+// console.log(sum);
+
+//~ Example 17
+// let vegitables = ["carror", "raddish", "onion", "onion"]
+// let count = vegitables.reduce((acc, curent) => {
+//     acc[curent] = (acc[curent] || 0) + 1
+//     return acc
+// },{})
+// console.log(count);
+
+
+
 
 
 
