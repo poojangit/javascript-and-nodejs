@@ -205,8 +205,92 @@
 // },{})
 // console.log(count);
 
+//& Transformation methods
 
+//! slice()
+//! splice()
+//! sort()
+//! reverse()
 
+//! slice() - returns a shallow copy of an array into a new array without modifying the original array
+
+//~ Example 18
+// let arr = [1,2,3,4,5,6,7,8,9]
+// let slicedArr = arr.slice(1,3)
+// console.log(slicedArr);
+// console.log(arr);
+
+//~ Example 19
+// let arr = [1,2,3,4,5,6,7,8,9]
+// let slicedArr = arr.slice(-3)
+// console.log(slicedArr);
+// console.log(arr);
+
+//! splice() - adds, removes, replaces elements in the array by modifing the original array
+
+//~ Example 20
+// let arr = [1,2,3,4,5,6,7,8,9]
+// let splicedArr = arr.splice(1,2, 'a','b','c')
+// console.log(splicedArr);
+// console.log(`original array ${arr}`);
+
+//! sort() 
+
+//~ Example 21
+// let fruits = ["kiwi", "orange","apple"]
+// let sortedArr = fruits.sort()
+// console.log(sortedArr);
+
+//~ Example 22
+// let nums = [10,2,7]
+// console.log(nums.sort()); // cannot sort
+
+//~ Example 23
+// let nums = [10,2,7]
+// let sorted = nums.sort((a,b) => a-b)
+// console.log(sorted);
+
+//~ Example 24
+// let users = [
+//     {
+//         userName: "pooja",
+//         age: 30
+//     },
+//     {
+//         userName: "priya",
+//         age: 60
+//     },
+//     {
+//         userName : "adan",
+//         age : 10
+//     }
+// ]
+// let sortedArray = users.sort((a,b)=> a.age -b.age)
+// console.log(sortedArray);
+
+//! reverse
+
+//~ Example 25
+// let nums = [10,20,30,40]
+// console.log(nums.reverse());
+
+//~ Example 26
+// let users = [
+//     {
+//         userName: "pooja",
+//         age: 30
+//     },
+//     {
+//         userName: "priya",
+//         age: 60
+//     },
+//     {
+//         userName : "adan",
+//         age : 10
+//     }
+// ]
+// const reversedData = users.reverse()
+// console.log(reversedData);
 
 
 
