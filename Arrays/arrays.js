@@ -292,9 +292,71 @@
 // const reversedData = users.reverse()
 // console.log(reversedData);
 
+//* Looping over array ------------->
 
+//! using normal for loop 
+//~ Example 27
+// let products = ["Mobile", "Laptop", "Earphones", "Charger"]
+// for(let i = 0 ; i<products.length ; i++) {
+//     console.log(products[i]);
+// }
 
+//& for-of
+//! Iterated over values of an iterable
+//! use when you need values directly
 
+//~ Example 28
+// for(let pro of products){
+//     console.log(pro.toUpperCase()); 
+// }
 
+//~ Example 29
 
+// let marks = [85, 98, 44, 37, 76, 60]
+// let sum = 0
+// for(let m of marks){
+//    sum = sum + m
+// }
+// console.log(sum);
+// let avg = sum/marks.length
+// console.log(avg);
+
+//~ Example 30
+// let prices = [250, 645, 300,900, 50]
+// let new_prices = []
+// let i = 0
+// for(let val of prices){
+//     offer = val*10 / 100
+//     prices[i] = prices[i] - offer
+//     console.log(`Offer price ${prices[i]}`);
+// }
+
+//& for-in
+//! Iterates over keys or indexes of an object or array
+//! Use when you need keys or property names
+
+//~ Example 31
+// let prices = [250, 645, 300, 900, 50]
+// let new_prices = []
+// let i = 0
+// for(let val of prices){
+//     offer = val*10 / 100
+//     prices[i] = prices[i] - offer
+//     console.log(`Offer price ${prices[i]}`);
+// }
+
+//~ Example 32
+// let flower = ['rose', 'lilly', 'marrigold']
+// for(let petals in flower){
+//     console.log(petals, flower[petals]);
+// }
+
+//~ Example 33
+// let users = {
+//     userName: "pooja",
+//     age: 30
+// }
+// for (let keys in users) {
+//     console.log(`${keys} : ${users[keys]}`);
+// }
 
