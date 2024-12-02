@@ -81,4 +81,4 @@ z()
 
 //! Functions like once
 //! memoize
-//! setTimeouts
+// ! setTimeouts
