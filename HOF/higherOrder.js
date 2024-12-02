@@ -80,3 +80,34 @@ const diameter = function(radius){
 
 console.log(radius.map(area));
 
+//~ Example 4
+
+function add5(x) {
+    return x + 5
+  }
+  
+  function multiplyBy2(x) {
+    return x * 2
+  }
+  
+  function compose(f, g) {
+    return function(x) {
+      return f(g(x))
+    }
+  }
+  
+  const add5AndMultiplyBy2 = compose(multiplyBy2, add5);
+  console.log(add5AndMultiplyBy2(3))
+
+//~ Example 5
+
+function delayTheExecution(message){
+    return function(delay){
+        setTimeout(()=> {
+            console.log(message);
+        },delay)
+    }
+}
+const delayedMessage = delayTheExecution("This is my delayed message")
+delayedMessage()
+
