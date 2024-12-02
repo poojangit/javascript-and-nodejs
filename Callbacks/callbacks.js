@@ -49,6 +49,7 @@
 
 // document.getElementById("btn").addEventListener("click", function() {
 //     console.log("Did you just click?");
+//     document.body.style.backgroundColor = "black"
 // })
 
 //^ 4. CallBacks in array methods(forEach,map, filter) ---------->
