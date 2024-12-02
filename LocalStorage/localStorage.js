@@ -9,3 +9,25 @@
 //! synchronous API
 //! size limit 
 
+//& Methods
+
+//! 1. setItem
+
+localStorage.setItem('userName', 'Pooja')
+
+//! 2. getItem
+
+let userName = localStorage.getItem('userName')
+console.log(userName);
+
+//! 3. removeItem
+
+// localStorage.removeItem('userName')
+
+//! 4. clear()
+
+// localStorage.clear()
+
+//! 5. length
+
+console.log(localStorage.length);
