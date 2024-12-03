@@ -33,3 +33,19 @@ printFullName.apply(name2, ["Udupi", "Karnataka"])
 let printMyName = printFullName.bind(name2,"Udupi", "Karnataka")
 console.log(printMyName);
 printMyName()
+
+//~ Example 2
+
+const person = {
+    fullName : function(city, country){
+        console.log(`${this.firstName} ${this.lastName} from ${city}, ${country}`);
+    }
+}
+const person1 = {firstName: "Pooja", lastName: "NG"}
+person.fullName.call(person1, "Bengaluru", "India")
+
+person.fullName.apply(person1, ["Bengaluru", "India"])
+
+const printName = person.fullName.bind(person1)
+printName("Pune", "India")
+
