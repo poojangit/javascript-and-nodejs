@@ -62,3 +62,5 @@ chair.price()
 
 //^ Prototypes in js allows objects and functions to share methods and properties efficiently.
 
+
+
