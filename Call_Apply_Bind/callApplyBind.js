@@ -26,26 +26,38 @@ printFullName.call(nameFunc, "Udupi", "Karnataka")
 
 //& apply()
 
-printFullName.apply(name2, ["Udupi", "Karnataka"])
+// printFullName.apply(name2, ["Udupi", "Karnataka"])
 
 //& bind()
 
-let printMyName = printFullName.bind(name2,"Udupi", "Karnataka")
-console.log(printMyName);
-printMyName()
+// let printMyName = printFullName.bind(name2,"Udupi", "Karnataka")
+// console.log(printMyName);
+// printMyName()
 
 //~ Example 2
 
+// const person = {
+//     fullName : function(city, country){
+//         console.log(`${this.firstName} ${this.lastName} from ${city}, ${country}`);
+//     }
+// }
+// const person1 = {firstName: "Pooja", lastName: "NG"}
+// person.fullName.call(person1, "Bengaluru", "India")
+
+// person.fullName.apply(person1, ["Bengaluru", "India"])
+
+// const printName = person.fullName.bind(person1)
+// printName("Pune", "India")
+
+//~ Example 3  
+//! Write a function introduce that uses this to print the name and age of a person. Use call, apply, and bind to invoke the function with different objects.
+
 const person = {
-    fullName : function(city, country){
-        console.log(`${this.firstName} ${this.lastName} from ${city}, ${country}`);
-    }
+    name : "Priya",
+    age : "10"
 }
-const person1 = {firstName: "Pooja", lastName: "NG"}
-person.fullName.call(person1, "Bengaluru", "India")
-
-person.fullName.apply(person1, ["Bengaluru", "India"])
-
-const printName = person.fullName.bind(person1)
-printName("Pune", "India")
-
+function introduce() {
+    console.log(` My name is ${this.name} and age is ${this.age}`);
+}
+introduce.call(person)
+introduce.apply(person)

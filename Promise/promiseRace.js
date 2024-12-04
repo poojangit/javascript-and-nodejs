@@ -23,4 +23,3 @@ const promise2 = Promise.reject('Immediate error');
 Promise.race([promise1, promise2])
   .then((result) => console.log(result))
   .catch((error) => console.error(error));
-

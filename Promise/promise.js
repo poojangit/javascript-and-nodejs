@@ -103,3 +103,16 @@
 // .then(result => console.log(result))
 // .catch(error => console.log(error))
 
+//! Create a function fetchData that simulates fetching data from an API and returns a promise that resolves after 2 seconds with a success message.
+
+function fetchData() {
+    console.log("Fetching data.........");
+    
+    return new Promise((resolve) => {
+        setTimeout(()=> {
+            resolve("Success")
+        }, 2000)
+    })
+}
+
+fetchData().then(result => console.log(result))

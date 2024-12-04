@@ -361,3 +361,52 @@
 // }
 
 
+//~ Example 34
+
+const books = [
+    {
+        title : "Revolution 2020",
+        author : "Chethan Bhagath",
+        price : 1000
+    },
+    {
+        title : "Hello",
+        author : "dourjoy datta",
+        price : 100
+    }
+]
+function addNewBook(title, author, price) {
+   return books.push({title, author, price})
+}
+addNewBook("abc",'xyz', 78)
+console.log(books);
+
+function findBook(title) {
+  return  books.find((book) => book.title == title)
+}
+findBook("Hello")
+console.log(books);
+
+function totalCost(){
+    return books.reduce((total, book) => total +  book.price , 0)
+}
+console.log(totalCost());
+
+//~ Example 35
+
+function filterByPrice(products, limit) {
+    return products.filter(product => product.price < limit)
+}
+
+const products = [
+    {
+        name : "Laptop",
+        price : 1000
+    },
+    {
+        name : "mouse",
+        price : 100
+    }
+]
+
+console.log(filterByPrice(products, 1000));
