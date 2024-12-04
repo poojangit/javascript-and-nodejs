@@ -43,9 +43,22 @@
 function Person(name){
     this.name = name
 }
+function Product(name){
+    this.name = name
+}
 Person.prototype.greet = function() {
     console.log(`Hello ${this.name}`);
 }
+Product.prototype.price  = function() {
+    console.log(`price of the product is ${this.name}`);
+    
+}
 let human = new Person("Poo")
+let human2 = new Person("Preethi")
 human.greet()
+human2.greet()
+let chair = new Product(100)
+chair.price()
+
+//^ Prototypes in js allows objects and functions to share methods and properties efficiently.
 
