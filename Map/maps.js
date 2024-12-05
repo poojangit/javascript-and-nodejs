@@ -31,7 +31,8 @@ let map = new Map([
     ['a',1],
     ['b',2],
     ['c',3],
-    ['d',4]
+    ['d',4],
+    ['d', 4]
 ])
 map.forEach((key, value) => {
     console.log(key, value);
