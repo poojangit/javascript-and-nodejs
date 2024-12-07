@@ -76,6 +76,18 @@
 // student.greet()
 // console.log(student.name); //* Inherited from person
 
+//^ prototype chain limitations
+//! if a property is deeply nested in the prototype chain, accessing it can be slower because javascript has to traverse the chain
+//! Modifying a property on a instance doesn't affect the prototype. It only affects the instance.
+
+function Animal() {
+}
+Animal.prototype.sound = "Animal sound"
+const cat = new Animal() 
+cat.sound = "Meow"
+console.log(cat.sound);
+console.log(Animal.prototype.sound);
+
 //~ Example 5
 
 // let student = {
@@ -118,3 +130,37 @@ employee.prototype.checkEmployee = function() {
 let firstEmp = new employee('Preethi', 'Mbbs', 100000)
 console.log(firstEmp);
 firstEmp.checkEmployee()
+
+//^ __proto__ vs prototype
+//! proto is a property of every object
+//! it points to the objects prototype
+
+//! prototype is a property of a function
+//! it is used when you create objects using a constructor function or class
+
+function Person(name){
+    this.name = name
+}
+console.log(Person.prototype);
+console.log(Person.__proto__);
+console.log(Person.__proto__);
+const Person1 = new Person("Pooja")
+console.log(Person1);
+console.log(Person1.__proto__);
+console.log(Person.prototype === Person1.__proto__);
+
+//^ Inheriting from prototypes
+//! we can create object that inherit from other objects using Object.create
+
+const animal = {
+    eats : true,
+    walk : function() {
+        console.log("Animal walks");
+    }
+}
+const dog = Object.create(animal)
+dog.barks = true
+console.log(dog.eats); //Inherited property
+console.log(dog.barks); //own property
+dog.walk()
+
