@@ -50,4 +50,3 @@ fortuner.setBrand = "fortuner"
 let lexus = new AudiCar()
 lexus.setBrand("lexus")
 
-
