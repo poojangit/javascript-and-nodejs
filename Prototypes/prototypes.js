@@ -62,7 +62,7 @@
 
 //^ Prototypes in js allows objects and functions to share methods and properties efficiently.
 
-//~ Example 4 - prototype chaining
+//~ Example 4 - prototype chaining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
 
 //^ prototype chaining - when we try to access the property or methods of an object, js first looks at the object itself. If it doesn't find, it looks at the object's prototype and so on . until it reaches the end of the chain
 
