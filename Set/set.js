@@ -54,7 +54,7 @@ console.log(mySet);
 //& Set operations
 //! union
 //! Intersection
-//! difference
+//! differenceout
 
 // let setA = new Set([1,2,3])
 // let setB = new Set([4,5,6])
