@@ -13,49 +13,68 @@
 
 //^ Properties of a set ---------
 //! size- returns the number of unique values in the set
-const nums = new Set([1,223,4,5,5,55,8])
-console.log(nums.size);
+// const nums = new Set([1,223,4,5,5,55,8])
+// console.log(nums.size);
 
 //^ Methods of a set -----------
 //! dubllicate will not be allowed in a set
 //& adding elements
-const mySet = new Set()
-mySet.add(10)
-mySet.add(20)
-mySet.add(20)
-mySet.add("Helloo")
-console.log(mySet);
+// const mySet = new Set()
+// mySet.add(10)
+// mySet.add(20)
+// mySet.add(20)
+// mySet.add("Helloo")
+// console.log(mySet);
 
 //& deleting elements
-console.log(mySet.delete(1));
-mySet.delete(10)
-console.log(mySet.delete(10));
-console.log(mySet);
+// console.log(mySet.delete(1));
+// mySet.delete(10)
+// console.log(mySet.delete(10));
+// console.log(mySet);
 
 //& checking for existance
-console.log(mySet.has(1));
-console.log(mySet.has(10));
-console.log(mySet.has("Helloo"));
+// console.log(mySet.has(1));
+// console.log(mySet.has(10));
+// console.log(mySet.has("Helloo"));
 
 //& clearing all elements
-mySet.clear()
-console.log(mySet.clear());
-console.log(mySet);
+// mySet.clear()
+// console.log(mySet.clear());
+// console.log(mySet);
 
 
-//! Iterarting over a set
+//^ Iterarting over a set
 
 // let set = new Set([1,2,3,4])
-
 // for(let value of set){
 //     console.log(value);
 // }
+// let set1 = new Set(["Apple", "Mango", "Watermelon"])
+// for(let fruits of set1){
+//     console.log(fruits);
+// }
+// set1.forEach(fruits => console.log(fruits))
 
-//& Set operations
+//^ converting set into an array
+//! by using the spread operator
+
+// const mySet = new Set([10,20,30,40,50])
+// console.log(mySet);
+// const myArray = [...mySet]
+// console.log(myArray);
+
+//^ Removing dublicates of a array 
+
+// let numbers = [1,1,12,3,4,5,4,5]
+// let uniqueNum = [...new Set(numbers)]
+// console.log(uniqueNum);
+
+//^ Set operations
 //! union
 //! Intersection
-//! differenceout
+//! difference
 
+//! union
 // let setA = new Set([1,2,3])
 // let setB = new Set([4,5,6])
 // let union = new Set([...setA,...setB])
@@ -70,6 +89,11 @@ console.log(mySet);
 // let result = new Set([...setA].filter(x=> setB.has(x)))
 // console.log(result);
 
+// let Set1 = new Set([10,20,30])
+// let Set2 = new Set([20,30,40])
+// let interSet = new Set([...Set1].filter(x => Set2.has(x)))
+// console.log(interSet);
+
 //! difference
 
 // let setA = new Set([1,20,2,3,4])
@@ -77,11 +101,22 @@ console.log(mySet);
 // let difference = new Set([...setA].filter(x => !setB.has(x)))
 // console.log(difference);
 
-//& Removing dublicates of a array 
+//^ WeakSet
+//! it is similar to sets but it only stores objects and holds weak references to them
 
-// let numbers = [1,1,12,3,4,5,4,5]
-// let uniqueNum = [...new Set(numbers)]
-// console.log(uniqueNum);
+const weakSet = new WeakSet()
+console.log(weakSet);
+const obj1 = {name : 'Priya'}
+const obj2 = {name : 'Riaz'}
+weakSet.add(obj1)
+weakSet.add(obj2)
+console.log(weakSet);
+console.log(weakSet.has(obj1));
+weakSet.delete(obj2)
+console.log(weakSet);
+// for(let value of weakSet) {
+//     console.log(value);
+// }
 
 //& usecases 
 //! Removing dublicates from an array
