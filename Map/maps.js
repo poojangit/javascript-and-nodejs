@@ -3,7 +3,7 @@
 //^ Map is a collection of key and value pair, where keys can be of any type
 
 //^ Creating a map
-
+//~ Example 1
 let myMap = new Map()
 console.log(myMap);
 
@@ -16,13 +16,14 @@ console.log(myMap);
 //^ key features
 //! keys can be of any data type
 //! Maintains insertion order
-const map = new Map()
-map.set('first',1)
-map.set('second',2)
-console.log([...map]);
+//~ Example 2
+// const map = new Map()
+// map.set('first',1)
+// map.set('second',2)
+// console.log([...map]);
 
 //! size property
-console.log(map.size);
+// console.log(map.size);
 
 //^ Methods and properties
 //! set(key, value)
@@ -45,21 +46,29 @@ console.log(myMap.get('name'));
 // myMap.clear()
 // console.log(myMap);
 
-//~ Example 2
-
-// let map = new Map([
-//     ['a',1],
-//     ['b',2],
-//     ['c',3],
-//     ['d',4],
-//     ['d', 4]
-// ])
-// map.forEach((key, value) => {
-//     console.log(key, value);
-// })
-// for(let [key,value] of map){
-//     console.log(key, value);
-// }
-
+//^ Iterating over maps
 //~ Example 3
+
+let map = new Map([
+    ['a',1],
+    ['b',2],
+    ['c',3],
+    ['d',4],
+    ['d', 4]
+])
+map.forEach((key, value) => {
+    console.log(key, value);
+})
+for(let [key,value] of map){
+    console.log(key, value);
+}
+
+//^ weakMap
+//! weakmap is similar to map, it only holds the object keys and removes them when no other references to the object exists
+//! keys in the weakMap must be objects and not primitives
+const weakMap = new WeakMap()
+const objKey = {}
+weakMap.set(objKey, 'value')
+console.log(weakMap.get(objKey));
+
 
