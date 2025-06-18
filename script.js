@@ -320,6 +320,230 @@ console.log(typeof d);
 
 //todo  ---------Date object methods--------
 
+let u;
+let o = new Date();
+u = o.toString();
+u = o.getTime()
+u = o.valueOf()
+u = o.getFullYear()
+u = o.getMonth() + 1
+u = o.getDate()
+u = o.getHours()
+u = o.getMinutes()
+u = o.getSeconds()
+u = o.getMilliseconds()
+u = `${o.getFullYear()} - ${o.getMonth() + 1} - ${o.getDate()}`
+u = Intl.DateTimeFormat('en-US').format(o)
+u = Intl.DateTimeFormat('en-GB').format(o)
+u = Intl.DateTimeFormat('default', {month: 'long'}).format(o)
+u = o.toLocaleString('default', {month: 'short'})
+u = o.toLocaleString('default', {
+    weekday : 'long',
+    year : 'numeric',
+    month : 'long',
+    day : 'numeric',
+    hour : 'numeric',
+    minute : 'numeric',
+    second : 'numeric',
+    timeZone : 'America/New_York'
+})
+console.log(u);
+
+//todo ---------Arrays and Objects --------------------
+
+let p;
+//array literals
+const numbers = [23,47,18,8,19,9]
+const mixed = [12,'Pooja', true, null]
+
+//array constructor
+const fruit = new Array('apple', 'grape', 'orange');
+p = numbers[0];
+p = numbers[0] + numbers[3]
+p = `My favorite fruit is an ${fruit[2]}`
+p = numbers.length
+fruit[2] = 'kiwi'
+// fruit.length = 2
+fruit[3] = 'Jackfruit'
+fruit[fruit.length] = 'blueberry'
+fruit[fruit.length] = 'peach'
+console.log(numbers);
+console.log(fruit);
+console.log(p);
+
+//todo ------ Array methods ------------
+
+let l;
+const arr1 = [23, 33, 82, 281, 9]
+arr1.push(30)
+arr1.pop()
+arr1.unshift(99)
+arr1.shift(99)
+// arr1.reverse()
+console.log(arr1.includes(9));
+console.log(arr1.indexOf(82));
+// console.log(arr1.slice(1,4));
+// console.log(arr1.splice(1,4));
+l = arr1.slice(1,4).reverse().toString().charAt(0)
+
+console.log(arr1);
+console.log(l);
+
+//todo ------Nesting , concatinating and concatination-------------
+
+let x1;
+const fruits1 = ['apple', 'berry', 'raspberry', 'banana']
+const veggies = ['tommato', 'carrot', 'beans']
+console.log(fruits1);
+x1 = fruits1[3][2]
+const edibleItems = [fruits1, veggies]
+x1 = edibleItems[1][2]
+x1 = fruits1.concat(veggies)
+console.log(veggies);
+console.log(edibleItems);
+
+// spread operator (...)
+x1 = [...fruits1, ...veggies]
+// Flatten Arrays 
+const arr2 = [1,3,[3,7], [24, [4, 4]]]
+console.log(arr2.flat().flat());
+
+//static methods on array object 
+
+x1 = Array.isArray('hello')
+x1 = Array.from('22716')
+const b1 = 1
+const b2 = 2
+const b3 = 3
+x1 = Array.of(b1, b2,b3)
+console.log(x1);
+
+const arr3 = [1,2,3,4,5]
+const x2 = arr3.reverse()
+x2.push(0)
+x2.unshift(6)
+console.log(x2);
+
+const arr4 = [1,2,3,4,5]
+const arr5 = [5,6,7,8,9,10]
+const x3 = arr4.slice(0,4).concat(arr5)
+
+console.log(x3);
+
+//todo ------Object Literals----------------
+let f;
+const person1 = {
+    name : 'Pooja',
+    age : 20,
+    isAdmin: true,
+    address: {
+        street : 'potheri',
+        city : 'kattankulthur',
+        state : 'Tamil nadu',
+    },
+    hobbies: ['skeching', 'music']
+}
+f = person1.name;
+f = person1['age']
+f = person1.address.state
+f = person1.hobbies[0]
+person1.name = "Preethi"
+person['isAdmin'] = false
+delete person1.age
+person1.hasChildren = true
+person1.greet = function() {
+    console.log(`Hello ${this.name}!!`);
+}
+person1.greet()
+const person2 = {
+    'first name' : 'Dheeraj',
+    'last name' : 'kumar',
+}
+f = person2['first name']
+
+console.log(person1);
+console.log(f);
+
+//todo ---------Object spread and method----------
+
+let x4
+const todo = new Object()
+todo.id = 1
+todo.name = 'Complete Js'
+todo.completed = false
+x4 = todo
+
+const person3 = {
+    address: {
+        pincode : 603203,
+        state : 'karnataka',
+        coords : {
+            lat : 24.66226,
+            lng : 72.26
+        },
+    },
+}
+x4 = person3.address.coords.lat
+
+const obj1 = {a:1, b:2}
+const obj2 = {c:3, d:4}
+const obj3 = {...obj1, ...obj2}
+const obj4 = Object.assign({}, obj1, obj2)
+const todos = [
+    {id : 1, name: 'comple js'},
+    {id : 1, name: 'complete angular'}
+]
+x4 = todos[0].name
+x4 = Object.keys(todo)
+x4 = Object.values(todo)
+x4 = Object.entries(todo)
+x4 = todo.hasOwnProperty('name')
+console.log(x4)
+// console.log(todo);
+
+//todo --------Destructring and naming
+
+const friName = 'Pooja';
+const lName = 'N G'
+const age3 = 30;
+
+const person4 = {
+    firstName: firstName,
+    lastName: lastName,
+    age : age
+}
+console.log(person4)
+console.log(person4.age);
+
+//todo ---Destructuring ---------
+
+const todo1 = {
+    id1 : 1,
+    title : 'can we be Strangers again?',
+    user: {
+        name3 : 'Pooja',
+    }
+}
+
+const {id1, title, user: {name3}} = todo1
+console.log(id1, title);
+
+const num2 = [1,2,3];
+// const[a4,b4,c4] = num2;
+const[a4,,c4] = num2;
+console.log(c4);
+
+//* Destructuring in functional parameter
+
+function greet({name, age}){
+    console.log(`Hello ${name} are you aged ${age}?`);
+}
+greet({name : 'pooja', age : '34'})
+
+
+
+
+
 
 
 
