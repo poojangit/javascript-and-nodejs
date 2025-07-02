@@ -32,6 +32,11 @@
 //     })
 // })
 
+//& ---------GraphQL API -----------------
+
+//^ A mordern alternative to REST APIs
+//^ is a Query language for Apis that allows clients to request specific data, avoiding over-fetching or underfetching
+//^ Unlike REST, which returns fixed data, GraphQL lets clients request exactly what they need — no more, no less.
 const query = `
   query {
     countries {

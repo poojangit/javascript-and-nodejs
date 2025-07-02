@@ -1,6 +1,6 @@
 1. JavaScript is a object-based and functional programming language.
 2. It is Object Oriented because it revolves around the concepts of Objects. and it does not Strictly follows all the principles of Oops.
-3. It is considered as an Object-oriented programming language.
+3. It supports Object-oriented programming language through features like prototypes and ES6 classes
 
 
 ------------------DATA TYPES--------------
@@ -28,7 +28,7 @@
 5. Datatypes are important for memory management, preventing the error, or to perform some Operations.
 
 6. number - here number represents the numerical values such floating number, integers, (NaN is Number)
-7. string - here string represents the alphanumeric values withing the "" or '' or ``. 
+7. string - here string represents the alphanumeric values with the "" or '' or ``. 
 8. boolean - this reprents a logical value 2 . either true or false.
 9. null - null represents nothing or empty. 
 10. undefined - if we not defined anything to a variable.

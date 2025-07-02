@@ -541,36 +541,553 @@ function greet({name, age}){
 greet({name : 'pooja', age : '34'})
 
 
+//* Fuction 
+
+function sayHello() {
+    console.log("Hello, World!");
+}
+sayHello();
+
+function add(num1 , num2) {
+    console.log(num1 + num2);
+}
+add(5, 10);
+
+function subtract(num1, num2){
+    return num1 - num2;
+}
+console.log(subtract(10, 5));
+
+//* parameters and arguments
+
+//Default parameters
+function registerUser(user="Guest") {
+    // if (!user) {
+    //     user = 'Guest';
+    // }
+    return `${user} has been registered successfully!`;
+}
+
+console.log(registerUser());
+
+//rest parameters
+function sum1(...numbers){
+    let total = 0
+    for(let i of numbers){
+        total +=i
+    }
+    return total;
+}
+console.log(sum1(1,2,3,4,5,6,7,8,9,10));
+
+//* for..in
+const person5 = { name : 'Pooja', age: 20, city: 'Chennai' };
+for(let key in person5) {
+    console.log(`${key}: ${person5[key]}`);
+}
+
+// not recommended for arrays
+const arr6 = ["a", "b", "c", "d"];
+for(let index in arr6) {
+    console.log(`Index ${index}: ${arr6[index]}`);
+}
+
+//* for... of
+for(let char of "Hello") {
+    console.log(char);
+}
+
+//^ ---------Callback Functions ----------------
+
+wishThem("Hello, Pooja!");
+
+function wishThem(message) {
+    console.log(message);
+}
+
+let greet2 = function(name) {
+    console.log(`Hello, ${name}!`);
+}
+greet2("Deepika");
+
+const greet3  = (n)=> 
+ `Hello ${n}`
+console.log(greet3("poo"))
 
 
+function sum1 (...nums){
+    return nums.reduce((total,n) => total + n, 0)
+}
+console.log(sum1(1,3,4));
 
 
+function animal1 (callback, name){
+    callback(`Hello, ${name}`)
+}
+animal1((message)=> console.log(message),"dog")
 
 
+function callbackDemo(callbackFunction, greetings){
+    console.log((callbackFunction() + `Hello ${greetings}`))
+}
+function message() {
+    return `Here is my greeting to you - `
+}
+callbackDemo(message, "Good morning")
 
 
+function calculate(number1, number2, operation){
+    console.log(operation(number1, number2));
+}
+function add(a,b){
+    return a+b;
+}
+function sub(a,b){
+    return a-b
+}
+calculate(1,2, add)
+calculate(4,2, sub)
+
+function myFilter(arr, callback){
+    const result = []
+    for(let i of arr){
+        if(callback(i)){
+            result.push(i)
+        }
+    }
+    return result
+
+}
+const numbers11 = [1,2,3, 4, 5]
+const evenNumbers = myFilter(numbers11, function(n11){
+    return n11%2==0;
+})
+console.log(evenNumbers);
 
 
+const app=()=>
+{
+    setTimeout(()=>
+    {
+        for(let i=0;i<3;i++)
+        {
+            console.log(i);
+        }
+    },1000)
+}
+
+for(var j=0;j<3;j++)
+{
+    console.log(j);
+}
+
+function calculation1(...number12) {
+    return number12.reduce((sum10, a12) => sum10 + a12 )
+}
+console.log(calculation1(25,62, 72))
+// let arrays=[1,2,3,4,5];
+// console.log(calculation1(arrays));
+
+// let arrays=[1,2,3,4,5];
+// let sum13= arrays.reduce((total, n) => total +n )
+// console.log(sum13);
+
+// app();
+
+//* Execute a callback after delay
+function delayMesage(callback){
+    return setTimeout(()=>{
+        callback()
+    }, 2000)
+}
+// delayMesage(()=> {{
+//     console.log("Hello Pooja how come you do this");
+// }})
+
+// function chainTwoCallback(cb1,cb2){
+//     return cb1()+cb2()
+// }
+// chainTwoCallback(()=> {
+//     console.log("Im callback 1");  
+// }, ()=> {
+//     console.log("Im callback 2");
+    
+// })
+
+//* simulate login using callback 
+
+// function login(username, callback) {
+//     if(username){
+//         return callback(username)
+//     }
+// }
+// let userName = "Dheeraj"
+// login(userName, (name)=> {
+//     console.log(`Login to ${name} is successfull`);   
+// })
+
+//* Nested callbacks (simulating async calls)
+
+// function Step1(callback){
+//     console.log("Start");
+//     setTimeout(callback, 1000)
+// }
+// function Step2(callback){
+//    console.log("Processing");
+//    setTimeout(callback, 1000)
+// }
+// function Step3(callback) {
+//     console.log("Done");
+//     setTimeout(callback, 1000)
+    
+// }
+// Step1(()=> {
+//     Step2(()=> {
+//         Step3()
+//     })
+// })
+
+//^ ---------IIFE function -------------
+
+// (console.log("Hello From IIFE"))()
+
+// ((name)=> {
+//     console.log(`Hello ${name}`);   
+// })("Poo")
+
+// ((...number) => {
+//  let result = number.map((n)=> Math.pow(n,2))
+//  console.log(result);
+// })(2,3,4)
+
+//^ -------Promise--------
+
+//* Creating a promise
+
+// const myPromise = new Promise((resolve, reject) => {
+//     const success = true;
+//     if(success) {
+//         resolve("Task completed");
+//     }
+//     else {
+//         reject("Task Failed!")
+//     }  
+// })
+
+// console.log(myPromise);
+
+//* Using .then() and .catch()
+
+// const myPromise = new Promise((resolve, reject) => {
+// const success = true;
+//     if(success) {
+//         resolve("Task completed");
+//     }
+//     else {
+//         reject("Task Failed!")
+//     }  
+// }).then((result)=> {
+//     console.log(result); 
+// }).catch((error) => {
+//     console.error(error);
+// })
+
+//* Chaining promises
+
+// const add1 = (num) => {
+//     return new Promise((resolve)=> {
+//         resolve(num+10)
+//     })
+// }
+// add1(5).then((result) => {
+//     console.log(result);
+//     return result*2
+// }).then((newResult)=> {
+//     console.log(newResult);
+// }).catch((error) => console.error(error))
+
+//* Converting callbacks to promise
+
+// function callbackpromise(callback){
+// setTimeout(()=> {
+//     callback(("Hee is your data"))
+// },1000)
+// }
+// callbackpromise((data)=> { console.log(`Hey ${data}`)})
+
+// function getPromiseData() {
+//     return new Promise((resolve, reject) => {
+       
+//         setTimeout(()=> {
+//             const error = false
+//             if(!error){
+//                 resolve("Here is your data")
+//             } else {
+//                 reject("error downloading the data")
+//             }
+//         }, 1000)
+//     })
+// }
+// getPromiseData().then((data) => console.log(data)).catch((data)=> console.log(data))
+
+//^ --------HOF ----------
+
+// function operation(a,b, callback){
+//    console.log(`${a} + ${b} = ${callback(a,b)}`);
+  
+// }
+// add = (x,y) => x+y
+// operation(10,20, add);
+
+function operationFunction(fact){
+    return function factorial(number){
+        return number*fact
+    }
+}
+const data = operationFunction(3)
+console.log(data(7));
+
+const factorial = function fact(n){
+    return n < 2 ? 1 : n*fact(n-1)
+}
+const result = factorial(5)
+console.log(result);
+
+//*---------Generator function -------
+
+function* generator() {
+    yield "Pooja"
+    yield 2
+}
+const gen = generator().next().value
+console.log(gen);
+
+ //^---------SET---------------
+
+ const setDemo = new Set();
+ setDemo.add(2)
+ setDemo.add(7)
+ setDemo.delete(2)
+ setDemo.clear()
+console.log(setDemo.size);
+console.log( setDemo.has(7));
+ console.log(setDemo);
+ 
+ const numbers1 = [12,3,4,4,4,45]
+const uniqueValue = [...new Set(numbers1)]
+console.log(uniqueValue);
+
+//^ ---------MAP----------------
+const mapDemo = new Map()
+mapDemo.set(1, "Pooja")
+mapDemo.set(2, "Preethi")
+mapDemo.set(3, "Preethi")
+console.log(mapDemo.get(1));
+mapDemo.delete(1)
+console.log(mapDemo.size);
+console.log(mapDemo);
+
+//^ -------Weak Map-------------
+
+// const weakMapDemo = new WeakMap()
+// let obj = {
+//     id: 1,
+// }
+// weakMapDemo.set(obj, "secreat")
+// console.log(weakMapDemo.get
+//     (obj)
+// );
+
+//-------
+
+// const privateData = new WeakMap() 
+// class User {
+//     constructor(name){
+//         privateData.set(this,{secret: "123", name})
+//     }
+//     getSecret() {
+//         return privateData.get(this).secret
+//     }
+// }
+// const user = new User("Pooja")
+// console.log(user.getSecret());
+
+// const weakMap = new WeakMap();
+
+// let obj = {
+//     name : "Pooja"
+// }
+// weakMap.set(obj, "Engineer")
+// console.log(obj);
+// console.log(weakMap.get(obj));
+
+// const arr11 = [10,20,30]
+// for(let value of arr){
+//     console.log(value);
+// }
+// const str = "JS"
+// for(let char of str){
+//     console.log(char);
+// }
+
+// console.log(Symbol.iterator);
+
+//* --------Iterable-----------
+
+const customIterable = {
+    *[Symbol.iterator](){
+        yield "Hello",
+        yield "Pooja"
+    }
+}
+for(let word of customIterable){
+    console.log(word);
+    
+}
+
+//^------Beginer questions --------
+
+function CapitalizeWord(sentence){
+    return sentence.split(" ").map(word => word.charAt(0).toUpperCase()+ word.slice(1)).join(" ")
+}
+console.log(CapitalizeWord("hey pooja, how are you"));
+
+function reverseString(str){
+    return str.split("").reverse().join("")
+}
+console.log(reverseString("Pooja hey"));
+
+function palindromeCheck(string) {
+    string = string.toLowerCase()
+    const reversedString = string.split('').reverse().join('')
+    return string==reversedString
+}
+if(palindromeCheck("madam")==true){
+    console.log("It is a palindrome ");
+}
+console.log(palindromeCheck("madam"));
+
+function findLargestNumber(...numbers){
+    return numbers.reduce((max, curr) => (curr>max ? curr: max))
+}
+console.log(findLargestNumber(1,2,3,4,5));
+
+function findLargestUsingFilter(arr){
+    const max = Math.max(...arr)
+    console.log(max);
+
+}
+findLargestUsingFilter([12,34, 4, 21, 89])
+
+//* -----find vowels---------
+
+function countVowels(str){
+    const vowels = "aeiouAEIOU"
+    let count = 0
+    for(let char of str) {
+        if(vowels.includes(char)){
+            count++
+        }
+    }
+    return count
+}
+console.log(countVowels("Pooja"));
+
+function countVowels1(str) {
+    const vowels = "aeiouAEIOU"
+    const s = str.split("").filter(char => vowels.includes(char)).length
+    return s;
+}
+console.log(countVowels1("heoy"));
+
+function flattenArray(arr){
+ let result = []
+ for(let element of arr){
+    if(Array.isArray(element)){
+        result = result.concat(flattenArray(element))
+    } else {
+        result.push(element)
+    }
+ }
+ return result
+}
+console.log(flattenArray([27,7,[65,97,[89,56]]]));
+
+function flattenArray2(arr) {
+ return arr.flat(Infinity)
+}
+console.log(flattenArray2([27,7,[65,97,[89,56]]]));
+
+//^ ---------Curring---------------
+
+function add(a) {
+ return function(b){
+    return function(c){
+        return a+b+c;
+    }
+ }
+}
+console.log(add(1)(2)(5));
+
+const add2 = a => b => a+b
+console.log(add2(1)(7));
+
+const greet1 = greeting => name => `${greeting}, ${name}`
+console.log(greet1("Hello")("Pooja"));
+
+//real world example
+
+function logger(level){
+    return function(message){
+        console.log(`[${level}] ${message}`);
+    }
+}
+const error = logger("ERROR")
+error("Somethig went wrong!")
+const info = logger("INFO")
+info("Server started!")
+
+console.log(typeof Infinity);
+
+//^-------------Async & await---------
 
 
+async function myFunction() {
+  const result = await someAsyncFunction();
+  console.log(result);
+}
+function someAsyncFunction(){
+    return "hello"
+}
+myFunction()
 
+async function greet() {
+    return "Hellooooooooooooo"
+}
+greet().then(console.log)
 
+// function wishLater(ms) {
+//     return new Promise(resolve => setTimeout(resolve, ms))
+// }
+// async function wishThem() {
+//     await wishLater(1000);
+//     console.log("HEEEEE");
+// }
+// wishThem()
 
+async function fetchData() {
+    try{
+        const response = await fetch("https://jsonplaceholder.typicode.com/posts/1")
+        const data = await response.json()
+        console.log(response);
+        console.log(data) 
+    } catch(error){
+        console.error("Error: ", error)
+    }
+}
+fetchData()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function add1(a,b){
+    return a+b
+}
+add1(2,4).then(console.log)
