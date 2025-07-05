@@ -76,8 +76,11 @@ const person = {
     name : "Priya",
     age : "10"
 }
-function introduce() {
-    console.log(` My name is ${this.name} and age is ${this.age}`);
+function introduce(message) {
+    console.log(`${message} My name is ${this.name} and age is ${this.age}`);
 }
 introduce.call(person)
 introduce.apply(person)
+const greet1 = introduce.bind(person, "Hello")
+greet1();
+
