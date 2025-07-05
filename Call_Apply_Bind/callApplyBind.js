@@ -62,5 +62,5 @@ function introduce(message) {
 introduce.call(person)
 introduce.apply(person)
 const greet1 = introduce.bind(person, "Hello")
-greet1()
+greet1();
 
